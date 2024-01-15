@@ -1,0 +1,49 @@
+Data and Logical error are said to be the runtime error.
+
+
+Errors:
+There is no perfect word
+Errors are inevitable.
+Errors can shipped even with the best software.
+Different types of errors
+CTE (syntax errors)
+RTE (Logical errors)
+
+
+Exception Handling
+
+--- It is an abnormal condition
+--- Mechanism to handle run-time errors so that the normal flow of application can be maintained
+ 
+ 
+ Types---
+ 
+ ---CHECKED EXCEPTION
+ -------- classes that extend throwable class are checked exception.
+ -------- FileNotFoundException, IOException, SQLException
+ 
+ ---UNCHECKED EXCEPTION
+ ------- classes that extend runtime exception are unchecked exception.
+ ------- ArrayIndexOutOFBoundException, NumberFormatException, NullPointerException.
+ 
+ 
+ Keywords
+ --try
+ --catch
+ --throw
+ --throws
+ --finally
+ 
+ 
+ Throwable class methods
+ -- printtrackstrace
+ -- toString
+ -- getMessage
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 

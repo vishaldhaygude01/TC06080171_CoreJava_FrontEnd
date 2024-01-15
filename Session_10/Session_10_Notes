@@ -1,0 +1,93 @@
+Collections...............
+
+
+------------------------Arrays----------------------------
+
+-- Array are fixed size
+-- Memory point of view arrays are not recommended to use.
+-- Performance point of view arrays are recommended to use.
+-- Arrays can hold only homogeneous data type elements.
+-- Arrays can hold both primitives and object types.
+
+
+
+
+-------------------------Collections-------------------------
+
+-- Collections are growable in nature.
+-- Memory point of view collections are highly recommended to use
+-- Performance point of view it is not recommended to use.
+-- collections are hold both homogeneous and heterogeneous interface.
+-- Collections can only hold the objects but not the primitive data types.
+
+
+
+
+-------------------------LEGACY CLASSES--------------------------------
+
+-- Early version of the java did not include the collection framework. It only defined several classes and interfaces that
+provide methods for storing objects. when collection framework were added in JSE 1.2 the original classes were to support the 
+collection interface. these classes are called legacy classes.
+
+legacy characters
+ -- Enumeration
+ -- Dictionary
+ -- Vecotr
+ -- Stack
+ -- Hash Table
+ -- Properties
+ 
+ 
+ 
+ 
+ 
+ -------------------------Collection Framework---------------------------
+ 
+ -- Collection in java is framework which provided an architecture to manipulate and store the group of objects.
+ -- In general we can consider collection as root interface of entire collection framework.
+ -- Collection interface defines the most common methods which can be applicable for any collection object.
+ -- there is no concrete class which 
+ 
+ 
+  -- List
+  -- Set
+  -- SortedSet
+  -- NavigableSet
+  -- Queue
+  -- Map
+  -- Sorted Map
+  -- MavigableMap
+  
+  
+  
+ ---------------------------ArrayList -----------------------------
+  
+-- It is a class which Implements from List interface. It is a growable array.
+-- Uses dynamic array to store different datatypes.
+-- No size limit, we can add or remove elements anytime. 
+-- Contains duplicate elements.
+-- It gives you fast iteration and fast random access.
+-- Maintains insertion order internally and it is not synchronized.
+
+
+
+-----------------------  Linked List  -------------------------------
+ 
+-– Implements collection interface
+-- It uses doubly linked list internally to store elements.
+-- It store duplicate elements.
+-- Maintains insertion order and is not synchronizes.
+-- Heterogeneous objects are allowed.
+-- Null insertions is possible.
+-- LinkedList<String> linkedList = new LinkedList<String>();
+
+
+-- 	Persisting state if n object is said to serializable.
+
+
+
+-----------------------
+
+
+ 
+ 
