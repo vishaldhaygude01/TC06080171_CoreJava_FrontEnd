@@ -1,0 +1,70 @@
+*************Insanceof Operator*****************
+
+- Why instance operator?
+ --- Identifying dynamic data type of an object
+ --- To access of objects polymorphically
+ 
+ - Java runtime keeps track of the class which each object belongs
+ - This information is used by java to select the correct methods to execute at the runtime
+ 
+ 
+ 
+ Covariant return type
+ - In method overriding, overridden method in subclass should have signature same as that of its class
+ - In Java 5 return type in the overridden ethod can be change as long as new return type is subtype of declare types
+ 
+ 
+
+ **********************IMP METHODS OF OBJECT CLASS**************
+ 
+ - String toString() - Returns a string representation of the object
+ - void finalize() - Called by the garbage collector to an object when garbage collection determines that there are no more refernces to the object
+ - boolean equals(Object obj) - Indicates whether some other object is equal to this one
+ - Object Clone() - Creates and return a copy of this object
+ - int hashcodes() - Return the hash code value of the object
+ - Class <?> getClass() - Returns the runtime class of this object
+ - void wait() - Causes the current thread to wait until another thread invloes the notify() method or notifyAll() method for this object
+ - void notify() - Wakes up theb single thread that is waiting on this object monitor
+ - void notifyAll() - Wakes up all threads that are waiting this objects monitor
+ 
+ 
+ 
+ ***********Convrete AND Abstract Classes***************
+  - A class which describes the functionality of the objects
+  - It can be Instantiated
+  
+  Abstract Class
+   - A class which contains generic/ common features that multiple derived classes can share
+   - It can contain abstract as well as non-abstract methos 
+   --- Abstract methods do not have implementation
+   --- Implementation is left to inheriting sub-classes
+   --- cannot be instantitated
+   
+   
+   
+   ***********Following  points should be noted regarding abstract class*********
+   
+   - One cannot create objects of abstract classes. Any attempt to do so results in CTE
+   - One can create references and therefore these classes support polymorphism
+   - Abstract methods do not have implementation
+   - A class inheriting from an abstract class must provide implementation to all the abstract methods else the class should be declared as abstrat
+   - static modifiers cannot be use with abstract methods
+   - Abstract methods cannot be used for constructors
+   
+   
+   
+   **************NEED OF INTERFACE**************
+   
+   WHY INTERFACE?
+   - To achieve role based inheritance
+   - To create loosely coupled applications
+    
+    
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 

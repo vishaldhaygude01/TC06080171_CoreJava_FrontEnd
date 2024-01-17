@@ -1,0 +1,19 @@
+Create an absract class Processor with int member variable data and method showData o display data value.
+Create abstract method process() to define processing of member data
+
+A) Create a class Factorial using abstract class Processor to calculate and print factorial of a number by
+overriding the process method
+
+
+
+
+
+
+
+
+Explain the importance of toString() and equals() method of the object class and override them on class 
+Employee(empId, empName, empSalary)
+
+- a) Create class for main method(say XYZ), and accept five employess information and store in an array. also ensure if entered 
+     empid already exist or not (use equals method)
+- b) Display all employee info toString method

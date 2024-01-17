@@ -1,0 +1,12 @@
+************INNER CLASS*****************
+
+- Definition of one class within the defination of another class
+- Inner class is a member of the enclosing class just like other class members
+
+***********TYPES
+- Member Inner Class 
+- Method Local Inner class
+- Anonymous Inner Class
+- Static Inner Class
+
+

@@ -1,0 +1,15 @@
+*******************ENUM******************
+
+- A enum is a type whose fields consists of a fixed set of constants
+- Created using keyword enum
+- It is a kind of class defination
+- The possible values are listed im curly braces, separated by commas. By conversion the value names in upper case
+- Java.lang.Enum class is an abstract class
+- By default, the contasts in the enumeration list are assigned the integer values 0,1,2 and so on.
+
+
+
+
+
+*********Marker Interface**************
+
