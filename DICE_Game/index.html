@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Player Dice Game</title>
+
+    <style>
+        .container {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .dice {
+            text-align: center;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        body {
+            background-color: #49543d;
+            margin: 0;
+        }
+
+        h1 {
+            margin: 30px;
+            font-family: "Lobster", cursive;
+            text-shadow: 5px 0 #232931;
+            font-size: 4.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            font-size: 2rem;
+            color: white;
+            font-family: "Indie Flower", cursive;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .bottom {
+            padding-top: 30px;
+        }
+
+        .butn {
+            background: black;
+            font-family: "Indie Flower", cursive;
+            border-radius: 7px;
+            color: #ffff;
+            font-size: 30px;
+            padding: 16px 25px 16px 25px;
+            text-decoration: none;
+        }
+
+        .butn:hover {
+            background: #232931;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Let's Play</h1>
+
+        <div class="dice">
+            <p class="Player1">Player 1</p>
+            <img class="img1" src="dice6.png">
+        </div>
+
+        <div class="dice">
+            <p class="Player2">Player 2</p>
+            <img class="img2" src="dice6.png">
+        </div>
+
+        <div class="dice">
+            <p class="Player3">Player 3</p>
+            <img class="img3" src="dice6.png">
+        </div>
+
+        <div class="dice">
+            <p class="Player4">Player 4</p>
+            <img class="img4" src="dice6.png">
+        </div>
+    </div>
+
+    <div class="container bottom">
+        <button type="button" class="butn" onClick="rollTheDice()">
+            Roll the Dice
+        </button>
+    </div>
+    <div class="container bottom">
+        <button type="button" class="butn" onClick="editNames()">
+            Edit Names
+        </button>
+    </div>
+
+    <script>
+        // Player names
+        var player1 = "Player 1";
+        var player2 = "Player 2";
+        var player3 = "Player 3";
+        var player4 = "Player 4";
+
+        // Function to change player names
+        function editNames() {
+            player1 = prompt("Change Player 1 name");
+            player2 = prompt("Change Player 2 name");
+            player3 = prompt("Change Player 3 name");
+            player4 = prompt("Change Player 4 name");
+
+            document.querySelector("p.Player1").innerHTML = player1;
+            document.querySelector("p.Player2").innerHTML = player2;
+            document.querySelector("p.Player3").innerHTML = player3;
+            document.querySelector("p.Player4").innerHTML = player4;
+        }
+
+        // Function to roll the dice
+        function rollTheDice() {
+            setTimeout(function () {
+                var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+                var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+                var randomNumber3 = Math.floor(Math.random() * 6) + 1;
+                var randomNumber4 = Math.floor(Math.random() * 6) + 1;
+
+                document.querySelector(".img1").setAttribute("src", "dice" + randomNumber1 + ".png");
+                document.querySelector(".img2").setAttribute("src", "dice" + randomNumber2 + ".png");
+                document.querySelector(".img3").setAttribute("src", "dice" + randomNumber3 + ".png");
+                document.querySelector(".img4").setAttribute("src", "dice" + randomNumber4 + ".png");
+
+                if (randomNumber1 === randomNumber2 && randomNumber2 === randomNumber3 && randomNumber3 === randomNumber4) {
+                    document.querySelector("h1").innerHTML = "Draw!";
+                } else if (
+                    (randomNumber1 === randomNumber2 && randomNumber1 > randomNumber3 && randomNumber1 > randomNumber4) ||
+                    (randomNumber2 === randomNumber3 && randomNumber2 > randomNumber1 && randomNumber2 > randomNumber4) ||
+                    (randomNumber1 === randomNumber3 && randomNumber1 > randomNumber2 && randomNumber1 > randomNumber4) ||
+                    (randomNumber1 === randomNumber4 && randomNumber1 > randomNumber2 && randomNumber1 > randomNumber3) ||
+                    (randomNumber2 === randomNumber4 && randomNumber2 > randomNumber1 && randomNumber2 > randomNumber3) ||
+                    (randomNumber3 === randomNumber4 && randomNumber3 > randomNumber1 && randomNumber3 > randomNumber2)
+                ) {
+                    document.querySelector("h1").innerHTML = "Draw!";
+                } else if (randomNumber4 > randomNumber1 && randomNumber4 > randomNumber2 && randomNumber4 > randomNumber3) {
+                    document.querySelector("h1").innerHTML = player4 + " WINS!";
+                } else if (randomNumber3 > randomNumber1 && randomNumber3 > randomNumber2 && randomNumber3 > randomNumber4) {
+                    document.querySelector("h1").innerHTML = player3 + " WINS!";
+                } else if (randomNumber1 > randomNumber2 && randomNumber1 > randomNumber3 && randomNumber1 > randomNumber4) {
+                    document.querySelector("h1").innerHTML = player1 + " WINS!";
+                } else {
+                    document.querySelector("h1").innerHTML = player2 + " WINS!";
+                }
+            }, 2500);
+        }
+    </script>
+</body>
+
+</html>
